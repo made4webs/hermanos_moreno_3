@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Llamar ahora · Hermanos Moreno</title>
+<meta name="description" content="Llama a Hermanos Moreno, escríbenos por WhatsApp o mándanos un mensaje. Vega de San Mateo, Gran Canaria.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#b6d088",
+                        "surface-container": "#20201f",
+                        "secondary-container": "#784f00",
+                        "tertiary-fixed": "#d2eca2",
+                        "on-tertiary": "#233600",
+                        "secondary": "#f6bc69",
+                        "tertiary": "#b6d088",
+                        "on-secondary-container": "#fec36f",
+                        "on-tertiary-fixed": "#131f00",
+                        "secondary-fixed": "#ffddb3",
+                        "on-secondary": "#452b00",
+                        "primary-container": "#801020",
+                        "surface-container-highest": "#353535",
+                        "surface": "#131313",
+                        "tertiary-container": "#32460d",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#8a1926",
+                        "on-surface-variant": "#dfbfbe",
+                        "on-primary": "#680014",
+                        "on-error": "#690005",
+                        "outline-variant": "#584141",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-primary": "#ab323b",
+                        "surface-tint": "#ffb3b2",
+                        "surface-variant": "#353535",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#a68a89",
+                        "secondary-fixed-dim": "#f6bc69",
+                        "primary": "#ffb3b2",
+                        "on-primary-container": "#ff888b",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#291800",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "primary-fixed": "#ffdad9",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#394d14",
+                        "on-primary-fixed": "#410009",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-container": "#9bb470"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "grid-gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "grid-margin": "24px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "headline-xl": ["Playfair Display", "serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "label-sm": ["Montserrat", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "headline-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "headline-lg": ["36px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", letterSpacing: "0.1em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+</script>
+<style>
+        html { scroll-behavior: smooth; }
+
+        /* Superficie 0: grano volcánico sutil */
+        body {
+            background-color: #131313;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+        }
+
+        /* Bordes fantasma en lugar de sombras */
+        .ghost-border { border: 1px solid rgba(246, 188, 105, 0.18); }
+
+        /* Guía de puntos del menú clásico de bistró */
+        .menu-dotted-leader {
+            flex-grow: 1;
+            border-bottom: 2px dotted rgba(223, 191, 190, 0.3);
+            margin: 0 16px;
+            position: relative;
+            top: -6px;
+        }
+
+        .btn-press:active { transform: scale(0.98); }
+
+        /* Foco visible y coherente para la navegación por teclado */
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #f6bc69;
+            outline-offset: 3px;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353535; border-radius: 4px; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen flex flex-col antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:bg-primary-container focus:text-on-primary-container focus:px-4 focus:py-2 focus:rounded" href="#contenido">Saltar al contenido</a>
+<!-- Cabecera -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300" id="site-header">
+<div class="flex justify-between items-center w-full px-grid-margin max-w-7xl mx-auto h-20 gap-4">
+<a class="font-headline-md text-headline-md text-primary tracking-tight hover:text-secondary transition-colors shrink-0" href="index.html">Hermanos Moreno</a>
+<nav class="hidden lg:flex items-center gap-6" aria-label="Navegación principal">
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="index.html">Inicio</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="carta.html">Carta</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="resenas.html">Reseñas</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="como-llegar.html">Cómo llegar</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-3 shrink-0">
+<div class="hidden sm:flex items-center gap-2 border-r border-outline-variant/30 pr-3"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">ES</span><span class="text-outline-variant/60" aria-hidden="true">|</span><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="en/call.html" hreflang="en" aria-label="Switch to English">EN</a></div>
+<a class="btn-press hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary-container px-5 py-2 rounded font-label-sm text-label-sm uppercase tracking-wider hover:opacity-90 transition-opacity" href="llamar.html">Llamar ahora</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="lg:hidden text-primary p-2 -mr-2" id="menu-toggle" type="button">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden lg:hidden border-t border-outline-variant/30 bg-surface/95 backdrop-blur-md" id="mobile-menu">
+<nav class="flex flex-col gap-1 px-grid-margin py-4 max-w-7xl mx-auto" aria-label="Navegación principal">
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="index.html">Inicio</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="carta.html">Carta</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="resenas.html">Reseñas</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="como-llegar.html">Cómo llegar</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="contacto.html">Contacto</a>
+<a class="mt-3 block text-center bg-primary-container text-on-primary-container px-5 py-3 rounded font-label-sm text-label-sm uppercase tracking-wider" href="llamar.html">Llamar ahora</a>
+<div class="flex items-center justify-center gap-2 pt-4 sm:hidden"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">ES</span><span class="text-outline-variant/60" aria-hidden="true">|</span><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="en/call.html" hreflang="en" aria-label="Switch to English">EN</a></div>
+</nav>
+</div>
+</header>
+<div class="flex-grow" id="contenido">
+<div class="noise-overlay"></div>
+<!-- Background Image Layer -->
+<div class="fixed inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" data-alt="A warm, dimly lit corner of a rustic traditional Canarian guachinche restaurant. Wood tables, subtle volcanic stone textures on the walls. The lighting is cozy and intimate, with deep charcoal shadows and warm ochre highlights. High contrast photography with a slight vignette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC34qWcSZQpV02I03ek95iFZeezJEIboaojSbHt_xRYZSlvMm7eUvy7B2uIvo_VBbA92MSQoKj-Lmlv3m7P3SraOeC8v_W_Kvfzr2XoB8Tq-g4DFlRqOnr92t6dby0ZBLJgkwAk2ZT6bCIRVgqjFR5RhghWm3Wiv5Wr26Wh0uwmEkw00ozrqiYyQhJwuJzMmM9vYV5yDv-mL-NhcJaeJFKlM26bTKeky5P6YdJaN4PcRTBrfVoBITSD')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
+</div>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center relative z-10 px-grid-margin pt-32 pb-section-gap-mobile md:pb-section-gap-desktop w-full max-w-lg mx-auto text-center">
+<!-- Brand / Identity -->
+<div class="mb-12">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-wide">Hermanos Moreno</span>
+<div class="w-12 h-px bg-outline/50 mx-auto mt-4"></div>
+</div>
+<!-- Hero Text -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-8 max-w-[280px] md:max-w-md mx-auto text-on-surface">
+            ¿Tienes hambre? Reserva tu mesa
+        </h1>
+<!-- Primary Action: Call Now -->
+<a class="btn-press group relative flex flex-col items-center justify-center w-full max-w-[280px] aspect-square rounded-full bg-primary-container text-on-primary-container mb-12 shadow-[0_0_40px_rgba(128,16,32,0.15)] border border-primary/20 hover:bg-primary-container/90 transition-all duration-300" href="tel:+34606888002">
+<span class="material-symbols-outlined text-[48px] mb-4 group-hover:scale-110 transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+<span class="font-headline-md text-headline-md">Llamar ahora</span>
+<span class="font-label-sm text-label-sm opacity-80 mt-2 tracking-widest">+34 606 888 002</span>
+</a>
+<!-- Secondary Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mb-12">
+<a class="flex-1 btn-press flex items-center justify-center gap-3 py-4 px-6 rounded border border-outline-variant/50 bg-surface/50 backdrop-blur-sm text-on-surface hover:border-secondary hover:text-secondary transition-colors duration-200" href="https://wa.me/34606888002" target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">chat</span>
+<span class="font-label-sm text-label-sm uppercase">WhatsApp</span>
+</a>
+<button class="flex-1 btn-press flex items-center justify-center gap-3 py-4 px-6 rounded border border-outline-variant/50 bg-surface/50 backdrop-blur-sm text-on-surface hover:border-secondary hover:text-secondary transition-colors duration-200" type="button" onclick="document.getElementById('message-form').scrollIntoView({behavior: 'smooth'})">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+<span class="font-label-sm text-label-sm uppercase">Mensaje</span>
+</button>
+<a class="flex-1 btn-press flex items-center justify-center gap-3 py-4 px-6 rounded border border-outline-variant/50 bg-surface/50 backdrop-blur-sm text-on-surface hover:border-secondary hover:text-secondary transition-colors duration-200" href="contacto.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">event_available</span><span class="font-label-sm text-label-sm uppercase">Reservar online</span></a>
+</div>
+<!-- Quick Info -->
+<div class="py-6 px-8 rounded border border-outline-variant/30 bg-surface-container/40 backdrop-blur-md max-w-md w-full">
+<div class="flex items-center justify-center gap-2 mb-2 text-secondary">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Horario</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Abrimos de Martes a Domingo<br/>
+                de 13:00 a 23:00
+            </p>
+</div>
+<!-- Simple Message Form (Hidden by default, simple interaction) -->
+<div class="w-full max-w-md mt-16 text-left border-t border-outline-variant/30 pt-12" id="message-form">
+<h3 class="font-headline-md text-headline-md mb-6">Envíanos un mensaje</h3>
+<form class="space-y-6" id="contact-message-form">
+<div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-on-surface placeholder:text-on-surface-variant/50 transition-colors" id="msg-name" name="name" required placeholder="Tu nombre" type="text"/>
+</div>
+<div>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-on-surface placeholder:text-on-surface-variant/50 transition-colors resize-none" id="msg-body" name="message" required placeholder="¿En qué podemos ayudarte?" rows="3"></textarea>
+</div>
+<button class="btn-press font-label-sm text-label-sm uppercase tracking-widest text-secondary hover:text-secondary-fixed transition-colors mt-4" type="submit">Enviar mensaje <span class="material-symbols-outlined align-middle ml-1 text-sm">arrow_forward</span>
+</button>
+</form>
+<div class="hidden mt-8 rounded-xl border border-tertiary-container bg-surface-container-high p-6" id="message-result" role="status" aria-live="polite">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary mb-3">Mensaje preparado</p>
+<pre class="font-body-md text-body-md text-on-surface whitespace-pre-wrap mb-4" data-summary></pre>
+<p class="font-body-md text-body-md text-on-surface-variant mb-5">Envíalo por WhatsApp y te respondemos lo antes posible.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<a class="btn-press inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded font-label-sm text-label-sm uppercase tracking-wider" data-whatsapp href="https://wa.me/34606888002" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">chat</span>Enviar por WhatsApp</a>
+<a class="btn-press inline-flex items-center justify-center gap-2 border border-secondary text-secondary px-6 py-3 rounded font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary/10 transition-colors" href="tel:+34606888002"><span class="material-symbols-outlined text-[18px]">call</span>Llamar +34 606 888 002</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Pie -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 mt-section-gap-desktop">
+<div class="max-w-7xl mx-auto px-grid-margin py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<div class="flex flex-col gap-4">
+<a class="font-headline-md text-headline-md text-primary hover:text-secondary transition-colors" href="index.html">Hermanos Moreno</a>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 Hermanos Moreno. Cocina tradicional canaria. Vega de San Mateo, Gran Canaria.</p>
+</div>
+<nav class="flex flex-col gap-2" aria-label="Enlaces del pie">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Navegación</h2>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="carta.html">Carta</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="resenas.html">Reseñas</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="como-llegar.html">Cómo llegar</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contacto.html">Contacto</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="llamar.html">Llamar ahora</a>
+</nav>
+<div class="flex flex-col gap-2">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Contacto</h2>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://maps.app.goo.gl/2Vo27RGTENFTxKdB7" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="tel:+34606888002">+34 606 888 002</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://wa.me/34606888002" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Horario</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Martes a domingo, 13:00 – 23:00<br>Lunes cerrado</p>
+<div class="flex flex-col gap-2 pt-6">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Legal</h2>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="aviso-legal.html">Aviso legal</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="privacidad.html">Política de privacidad</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  var LOCALE = "es-ES";
+  var WA = "https://wa.me/34606888002";
+  var T = {
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
+    resTemplate: "Hola, me gustaría reservar mesa en Hermanos Moreno.\n\nNombre: {name}\nTeléfono: {phone}\nFecha y hora: {date}\nComensales: {guests}",
+    msgTemplate: "Hola, soy {name}.\n\n{message}"
+  };
+
+  /* --- Menú móvil --- */
+  var toggle = document.getElementById("menu-toggle");
+  var menu = document.getElementById("mobile-menu");
+  var icon = document.getElementById("menu-icon");
+  if (toggle && menu) {
+    var setOpen = function (open) {
+      menu.classList.toggle("hidden", !open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? T.closeMenu : T.openMenu);
+      if (icon) icon.textContent = open ? "close" : "menu";
+    };
+    toggle.addEventListener("click", function () {
+      setOpen(menu.classList.contains("hidden"));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024) setOpen(false);
+    });
+  }
+
+  /* --- Sombra de la cabecera al desplazarse --- */
+  var header = document.getElementById("site-header");
+  if (header) {
+    var onScroll = function () {
+      var scrolled = window.scrollY > 20;
+      header.classList.toggle("shadow-lg", scrolled);
+      header.classList.toggle("bg-background/95", scrolled);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var fill = function (tpl, data) {
+    return tpl.replace(/\{(\w+)\}/g, function (_, k) { return data[k] || ""; });
+  };
+
+  var showResult = function (box, text) {
+    if (!box) return;
+    var summary = box.querySelector("[data-summary]");
+    var wa = box.querySelector("[data-whatsapp]");
+    if (summary) summary.textContent = text;
+    if (wa) wa.href = WA + "?text=" + encodeURIComponent(text);
+    box.classList.remove("hidden");
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  /* --- Formulario de reserva --- */
+  var resForm = document.getElementById("reservation-form");
+  if (resForm) {
+    resForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var raw = document.getElementById("date").value;
+      var when = raw;
+      if (raw) {
+        var d = new Date(raw);
+        if (!isNaN(d.getTime())) {
+          when = d.toLocaleString(LOCALE, {
+            weekday: "long", day: "numeric", month: "long",
+            hour: "2-digit", minute: "2-digit"
+          });
+        }
+      }
+      showResult(document.getElementById("reservation-result"), fill(T.resTemplate, {
+        name: document.getElementById("name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        date: when,
+        guests: document.getElementById("guests").value
+      }));
+    });
+  }
+
+  /* --- Formulario de mensaje --- */
+  var msgForm = document.getElementById("contact-message-form");
+  if (msgForm) {
+    msgForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      showResult(document.getElementById("message-result"), fill(T.msgTemplate, {
+        name: document.getElementById("msg-name").value.trim(),
+        message: document.getElementById("msg-body").value.trim()
+      }));
+    });
+  }
+})();
+</script>
+</body>
+</html>

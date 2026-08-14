@@ -1,0 +1,15 @@
+# Configuración local de Claude Code (permisos de esta máquina)
+.claude/settings.local.json
+
+# Dependencias (el proyecto no usa ninguna, pero por si acaso)
+node_modules/
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
