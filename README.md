@@ -84,9 +84,6 @@ Estos datos vienen de la plantilla de Stitch y **no son reales**:
   kilómetros al oeste del casco de San Mateo. Conviene confirmarlo: aparece en el
   eslogan de la portada, en el copyright del pie y en las descripciones `<meta>`
   (funciones `buildHome` y `buildFooter` de `build.mjs`).
-- **Teléfono `+34 922 000 000`** y el número de WhatsApp asociado. Es el de la
-  plantilla, y el prefijo 922 es de Tenerife: el restaurante está en Gran Canaria
-  (928 / 9xx). Constantes `PHONE_HREF`, `PHONE_DISPLAY` y `WHATSAPP`.
 - **Indicaciones para llegar en coche.** Los dos itinerarios de `como-llegar.html`
   («Desde Las Palmas» por la GC-3/GC-15, «Desde el Sur» por la GC-60) los inventó
   Stitch, igual que el aparcamiento gratuito a 50 m y el ascensor. Hay que revisarlos
@@ -107,3 +104,14 @@ Estos datos vienen de la plantilla de Stitch y **no son reales**:
   `https://search.google.com/local/writereview?placeid=ChIJ…`.
 - **Tailwind por CDN.** Sirve para desarrollo. Para producción conviene compilar el
   CSS y así evitar el parpadeo inicial y la dependencia de un CDN externo.
+
+## Ya resuelto
+
+- **Teléfono.** `+34 606 888 002`, en los enlaces `tel:`, en WhatsApp y en los
+  textos que componen los formularios. Constantes `PHONE_HREF`, `PHONE_DISPLAY` y
+  `WHATSAPP` de `build.mjs`.
+- **Google Maps.** Los botones de mapa, la dirección del pie y los de reseñas
+  apuntan a la ficha real del restaurante; «Abrir en Google Maps» lanza la
+  navegación a sus coordenadas.
+- **Recursos compartidos.** El CSS, la configuración de Tailwind y el script de menú
+  y formularios viven en `assets/` en vez de repetirse en cada página.
