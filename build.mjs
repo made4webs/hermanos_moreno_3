@@ -198,7 +198,11 @@ const SITE_CSS = `
         ::-webkit-scrollbar-thumb { background: #353535; border-radius: 4px; }
 `;
 
+/** Prefijo relativo hasta la raíz del sitio (las páginas EN viven en /en/). */
+const assets = (lang) => (lang === "es" ? "assets/" : "../assets/");
+
 function buildHead(lang, title, description) {
+  const a = assets(lang);
   return `<!DOCTYPE html>
 <html class="dark" lang="${lang}">
 <head>
@@ -207,12 +211,12 @@ function buildHead(lang, title, description) {
 <title>${title}</title>
 <meta name="description" content="${description}">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="${a}tailwind.config.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">${TAILWIND_CONFIG}</script>
-<style>${SITE_CSS}</style>
+<link rel="stylesheet" href="${a}site.css">
 </head>
 `;
 }
@@ -347,7 +351,13 @@ ${legalLinks}
 /* ------------------------------------------------------------------------ */
 /* Script compartido: menú móvil, cabecera al hacer scroll, formularios      */
 /* ------------------------------------------------------------------------ */
+/** Etiqueta que enlaza el script compartido desde cada página. */
 function buildScript(lang) {
+  return `<script src="${assets(lang)}site.${lang}.js"></script>\n`;
+}
+
+/** Cuerpo del script compartido, que se escribe en assets/site.<lang>.js */
+function siteScriptBody(lang) {
   const t =
     lang === "es"
       ? {
@@ -367,8 +377,7 @@ function buildScript(lang) {
           msgTemplate: "Hello, my name is {name}.\\n\\n{message}",
         };
 
-  return `<script>
-(function () {
+  return `(function () {
   var LOCALE = ${JSON.stringify(t.locale)};
   var WA = ${JSON.stringify(WHATSAPP)};
   var T = {
@@ -466,7 +475,6 @@ function buildScript(lang) {
     });
   }
 })();
-</script>
 `;
 }
 
@@ -1064,6 +1072,16 @@ ${sections}
 function main() {
   if (!fs.existsSync(SRC)) throw new Error("No se encuentra la carpeta de diseños: " + SRC);
   fs.mkdirSync(OUT_EN, { recursive: true });
+
+  // Recursos compartidos por las 16 páginas: se sirven una vez y se cachean,
+  // en lugar de repetirse dentro de cada HTML.
+  const assetsDir = path.join(ROOT, "assets");
+  fs.mkdirSync(assetsDir, { recursive: true });
+  fs.writeFileSync(path.join(assetsDir, "tailwind.config.js"), TAILWIND_CONFIG.trim() + "\n", "utf8");
+  fs.writeFileSync(path.join(assetsDir, "site.css"), SITE_CSS.trim() + "\n", "utf8");
+  for (const lang of ["es", "en"]) {
+    fs.writeFileSync(path.join(assetsDir, `site.${lang}.js`), siteScriptBody(lang), "utf8");
+  }
 
   for (const lang of ["es", "en"]) {
     buildHome(lang);
