@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Carta · Hermanos Moreno</title>
+<meta name="description" content="Entrantes, platos tradicionales y postres canarios de Hermanos Moreno, en Vega de San Mateo.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#b6d088",
+                        "surface-container": "#20201f",
+                        "secondary-container": "#784f00",
+                        "tertiary-fixed": "#d2eca2",
+                        "on-tertiary": "#233600",
+                        "secondary": "#f6bc69",
+                        "tertiary": "#b6d088",
+                        "on-secondary-container": "#fec36f",
+                        "on-tertiary-fixed": "#131f00",
+                        "secondary-fixed": "#ffddb3",
+                        "on-secondary": "#452b00",
+                        "primary-container": "#801020",
+                        "surface-container-highest": "#353535",
+                        "surface": "#131313",
+                        "tertiary-container": "#32460d",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#8a1926",
+                        "on-surface-variant": "#dfbfbe",
+                        "on-primary": "#680014",
+                        "on-error": "#690005",
+                        "outline-variant": "#584141",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-primary": "#ab323b",
+                        "surface-tint": "#ffb3b2",
+                        "surface-variant": "#353535",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#a68a89",
+                        "secondary-fixed-dim": "#f6bc69",
+                        "primary": "#ffb3b2",
+                        "on-primary-container": "#ff888b",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#291800",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "primary-fixed": "#ffdad9",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#394d14",
+                        "on-primary-fixed": "#410009",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-container": "#9bb470"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "grid-gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "grid-margin": "24px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "headline-xl": ["Playfair Display", "serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "label-sm": ["Montserrat", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "headline-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "headline-lg": ["36px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", letterSpacing: "0.1em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+</script>
+<style>
+        html { scroll-behavior: smooth; }
+
+        /* Superficie 0: grano volcánico sutil */
+        body {
+            background-color: #131313;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+        }
+
+        /* Bordes fantasma en lugar de sombras */
+        .ghost-border { border: 1px solid rgba(246, 188, 105, 0.18); }
+
+        /* Guía de puntos del menú clásico de bistró */
+        .menu-dotted-leader {
+            flex-grow: 1;
+            border-bottom: 2px dotted rgba(223, 191, 190, 0.3);
+            margin: 0 16px;
+            position: relative;
+            top: -6px;
+        }
+
+        .btn-press:active { transform: scale(0.98); }
+
+        /* Foco visible y coherente para la navegación por teclado */
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #f6bc69;
+            outline-offset: 3px;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353535; border-radius: 4px; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen flex flex-col antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:bg-primary-container focus:text-on-primary-container focus:px-4 focus:py-2 focus:rounded" href="#contenido">Saltar al contenido</a>
+<!-- Cabecera -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300" id="site-header">
+<div class="flex justify-between items-center w-full px-grid-margin max-w-7xl mx-auto h-20 gap-4">
+<a class="font-headline-md text-headline-md text-primary tracking-tight hover:text-secondary transition-colors shrink-0" href="index.html">Hermanos Moreno</a>
+<nav class="hidden lg:flex items-center gap-6" aria-label="Navegación principal">
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="index.html">Inicio</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1" href="carta.html" aria-current="page">Carta</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="resenas.html">Reseñas</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="como-llegar.html">Cómo llegar</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 border-b-2 border-transparent pb-1" href="contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-3 shrink-0">
+<div class="hidden sm:flex items-center gap-2 border-r border-outline-variant/30 pr-3"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">ES</span><span class="text-outline-variant/60" aria-hidden="true">|</span><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="en/menu.html" hreflang="en" aria-label="Switch to English">EN</a></div>
+<a class="btn-press hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary-container px-5 py-2 rounded font-label-sm text-label-sm uppercase tracking-wider hover:opacity-90 transition-opacity" href="llamar.html">Llamar ahora</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="lg:hidden text-primary p-2 -mr-2" id="menu-toggle" type="button">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden lg:hidden border-t border-outline-variant/30 bg-surface/95 backdrop-blur-md" id="mobile-menu">
+<nav class="flex flex-col gap-1 px-grid-margin py-4 max-w-7xl mx-auto" aria-label="Navegación principal">
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="index.html">Inicio</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold bg-surface-container" href="carta.html" aria-current="page">Carta</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="resenas.html">Reseñas</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="como-llegar.html">Cómo llegar</a>
+<a class="block py-3 px-3 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary hover:bg-surface-container/60 transition-colors" href="contacto.html">Contacto</a>
+<a class="mt-3 block text-center bg-primary-container text-on-primary-container px-5 py-3 rounded font-label-sm text-label-sm uppercase tracking-wider" href="llamar.html">Llamar ahora</a>
+<div class="flex items-center justify-center gap-2 pt-4 sm:hidden"><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">ES</span><span class="text-outline-variant/60" aria-hidden="true">|</span><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="en/menu.html" hreflang="en" aria-label="Switch to English">EN</a></div>
+</nav>
+</div>
+</header>
+<div class="flex-grow" id="contenido">
+<div class="max-w-7xl mx-auto px-grid-margin space-y-24">
+<!-- Category: Starters -->
+<section aria-labelledby="starters-heading">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary" id="starters-heading">Entrantes</h2>
+<div class="h-px bg-outline-variant/30 flex-grow ml-8 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter">
+<!-- Food Card 1 -->
+<article class="bg-surface-container-low ghost-border rounded-lg overflow-hidden group">
+<div class="h-64 overflow-hidden relative">
+<img alt="Queso frito" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A rustic, close-up shot of freshly fried Queso Frito (fried cheese) served on a dark slate plate with a side of vibrant red mojo sauce. The lighting is warm and directional, emphasizing the crispy golden crust of the cheese and the rich, dark textures of the rustic Canarian setting. High-contrast, artisanal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEXCsXlyBoeh_L-xyxAh-kGwFB1_L7dsQ3NZjrjLtEAGfpFjrDFIQPehaEwbivJk9rsb8F-fWqt7rJXRXq0LKU8-3v_KrI54_Uee9r4zzLVO3yg5xxXfVfOsQnziFQj6jRKD1V6PexZtfDZg-QWcDu1yTo5EL1ktUDhYDXt8zirISqUKqQ0mZWFIFWBp40_HPGqR_2wmDl4cdUChKh17SLSCRl6j7WpJiurKn_fyKIrzMCVJMFdEJr"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider">Favorito Local</div>
+</div>
+<div class="p-6 md:p-8">
+<div class="flex items-baseline justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Queso Frito</h3>
+<span class="font-headline-md text-headline-md text-primary ml-4">€8.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Queso artesanal Palmero frito servido con mojos tradicionales y un toque de miel de palma.</p>
+</div>
+</article>
+<!-- Menu List Style for other starters -->
+<div class="bg-surface-container-low ghost-border rounded-lg p-6 md:p-8 flex flex-col justify-center space-y-8">
+<div class="flex flex-col">
+<div class="flex items-baseline w-full">
+<span class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">Croquetas Caseras</span>
+<div class="menu-dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary">€9.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Croquetas caseras con jamón ibérico y queso local.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline w-full">
+<span class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">Pimientos Padrón</span>
+<div class="menu-dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary">€6.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Pimientos de Padrón fritos con sal marina gruesa.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Main Courses (Bento/Asymmetrical Style) -->
+<section aria-labelledby="mains-heading">
+<div class="flex items-center justify-between mb-12">
+<div class="h-px bg-outline-variant/30 flex-grow mr-8 hidden md:block"></div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary text-right" id="mains-heading">Platos Principales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
+<!-- Large Feature Item -->
+<article class="md:col-span-8 bg-surface-container-low ghost-border rounded-lg overflow-hidden flex flex-col md:flex-row group">
+<div class="md:w-1/2 h-72 md:h-auto overflow-hidden relative">
+<img alt="Presa Ibérica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A top-down, high-quality editorial food photograph of Presa Ibérica, perfectly seared and sliced, resting on a rustic wooden board. The meat has a rich, caramelized crust and pink center, accompanied by scattered sea salt flakes and roasted garlic. The background is a dark, moody volcanic stone texture with dramatic, warm directional lighting highlighting the meat's texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDItEOOyKuMXcXDTIfZIBEA1N_YIgGKqhxWWzorI_SEnbflgL9oMzHzYHzU5LFk73iaimPUX_2XqXcS7K7x9bImL2hitkAX0kHFOTKcQBtWu9118UD6tDBDnezxqo-5pPWgii33h3vdtZWELPv0H50shNXXImUdDtea-Wn_kUNWr1VRPONS_nHJNvoT8Vti8WeX2o3cZKwaGj5DI5mLxhoSwFdjIqyo3pI89dDlUsRVf4qwZoV_Ncd"/>
+</div>
+<div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+<div class="inline-block bg-error-container text-on-error-container px-3 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider mb-4 w-fit">Especial del Chef</div>
+<div class="flex items-baseline justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Presa Ibérica</h3>
+<span class="font-headline-md text-headline-md text-primary ml-4">€18.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Corte premium de cerdo ibérico, asado sobre piedra volcánica, servido con papas arrugadas y mojo rojo.</p>
+</div>
+</article>
+<!-- Smaller Feature Item -->
+<article class="md:col-span-4 bg-surface-container-low ghost-border rounded-lg p-6 md:p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cerdo Frito</h3>
+<span class="font-headline-md text-headline-md text-primary ml-4">€14.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Trozos de cerdo frito tradicional canario, marinado en especias locales y ajo.</p>
+</div>
+<div class="h-48 overflow-hidden rounded mt-auto">
+<img alt="Cerdo Frito" class="w-full h-full object-cover" data-alt="A close-up shot of traditional Canarian Cerdo Frito (fried pork). Golden brown, crispy pork chunks garnished with fresh herbs, sitting in a dark, rustic terracotta bowl. Deep shadows and warm, inviting highlights emphasizing the savory texture of the meat against a dark, minimalist table setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuH9UDalgAdWSfjQHM6dhxHgbCGeuRBtumoTPK5wBw-rETJwQOVzmIhF2RqABWpjs7HpB7YwqTnj2066PeeiyZ37pVRY_3nr5endfSJbmx9GoBQtOejmHAsSppLQmWP1dWHTX1KxArTQIHUm4jeCjQ18FbJWkWvogbEXp6-9v_9r3clQadriAnMNN-Xt-ahesUe6kX09ej9Fix8NT7Ws0m3qMVxgF1o8rTQnm6fUTz0YY9wRaziHr"/>
+</div>
+</article>
+</div>
+</section>
+<!-- Category: Traditional Dishes (Text heavy, classic menu layout) -->
+<section aria-labelledby="traditional-heading">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary" id="traditional-heading">Platos Tradicionales</h2>
+<div class="h-px bg-outline-variant/30 flex-grow ml-8 hidden md:block"></div>
+</div>
+<div class="bg-surface-container-highest ghost-border rounded-xl p-8 md:p-12 relative overflow-hidden">
+<!-- Subtle background decoration -->
+<div class="absolute -right-24 -bottom-24 text-surface-variant opacity-20 pointer-events-none">
+<span class="material-symbols-outlined" style="font-size: 300px; font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Item 1 -->
+<div class="flex flex-col">
+<div class="flex items-baseline w-full">
+<span class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">Potaje de Berros</span>
+<div class="menu-dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary">€12.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">Un guiso de berros abundante y tradicional hecho con costillas de cerdo tiernas, batatas y frijoles locales. El verdadero sabor de un hogar canario.</p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col">
+<div class="flex items-baseline w-full">
+<span class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">Escaldón de Gofio</span>
+<div class="menu-dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary">€9.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">Harina de grano tostado amasada con caldo de carne rico, servida con cebolla roja, menta fresca y trozos de queso local.</p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col">
+<div class="flex items-baseline w-full">
+<span class="font-headline-md text-headline-md text-on-surface whitespace-nowrap">Ropa Vieja</span>
+<div class="menu-dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary">€11.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">Un sabroso guiso de carne de res y pollo desmenuzada con garbanzos, papas y un rico sofrito a base de tomate.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Llamada a la acción de la carta -->
+<section class="text-center pt-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">¿Te has decidido? Reserva tu mesa y te la guardamos.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="btn-press bg-primary-container text-on-primary-container px-8 py-3 rounded font-label-sm text-label-sm uppercase tracking-widest" href="contacto.html">Reservar mesa</a>
+<a class="btn-press border border-secondary text-secondary px-8 py-3 rounded font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-colors" href="llamar.html">Llamar ahora</a>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Pie -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 mt-section-gap-desktop">
+<div class="max-w-7xl mx-auto px-grid-margin py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<div class="flex flex-col gap-4">
+<a class="font-headline-md text-headline-md text-primary hover:text-secondary transition-colors" href="index.html">Hermanos Moreno</a>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 Hermanos Moreno. Cocina tradicional canaria. Vega de San Mateo, Gran Canaria.</p>
+</div>
+<nav class="flex flex-col gap-2" aria-label="Enlaces del pie">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Navegación</h2>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="carta.html">Carta</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="resenas.html">Reseñas</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="como-llegar.html">Cómo llegar</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contacto.html">Contacto</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="llamar.html">Llamar ahora</a>
+</nav>
+<div class="flex flex-col gap-2">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Contacto</h2>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://maps.app.goo.gl/2Vo27RGTENFTxKdB7" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="tel:+34606888002">+34 606 888 002</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="https://wa.me/34606888002" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Horario</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Martes a domingo, 13:00 – 23:00<br>Lunes cerrado</p>
+<div class="flex flex-col gap-2 pt-6">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-1">Legal</h2>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="aviso-legal.html">Aviso legal</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="privacidad.html">Política de privacidad</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  var LOCALE = "es-ES";
+  var WA = "https://wa.me/34606888002";
+  var T = {
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
+    resTemplate: "Hola, me gustaría reservar mesa en Hermanos Moreno.\n\nNombre: {name}\nTeléfono: {phone}\nFecha y hora: {date}\nComensales: {guests}",
+    msgTemplate: "Hola, soy {name}.\n\n{message}"
+  };
+
+  /* --- Menú móvil --- */
+  var toggle = document.getElementById("menu-toggle");
+  var menu = document.getElementById("mobile-menu");
+  var icon = document.getElementById("menu-icon");
+  if (toggle && menu) {
+    var setOpen = function (open) {
+      menu.classList.toggle("hidden", !open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? T.closeMenu : T.openMenu);
+      if (icon) icon.textContent = open ? "close" : "menu";
+    };
+    toggle.addEventListener("click", function () {
+      setOpen(menu.classList.contains("hidden"));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024) setOpen(false);
+    });
+  }
+
+  /* --- Sombra de la cabecera al desplazarse --- */
+  var header = document.getElementById("site-header");
+  if (header) {
+    var onScroll = function () {
+      var scrolled = window.scrollY > 20;
+      header.classList.toggle("shadow-lg", scrolled);
+      header.classList.toggle("bg-background/95", scrolled);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var fill = function (tpl, data) {
+    return tpl.replace(/\{(\w+)\}/g, function (_, k) { return data[k] || ""; });
+  };
+
+  var showResult = function (box, text) {
+    if (!box) return;
+    var summary = box.querySelector("[data-summary]");
+    var wa = box.querySelector("[data-whatsapp]");
+    if (summary) summary.textContent = text;
+    if (wa) wa.href = WA + "?text=" + encodeURIComponent(text);
+    box.classList.remove("hidden");
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  /* --- Formulario de reserva --- */
+  var resForm = document.getElementById("reservation-form");
+  if (resForm) {
+    resForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var raw = document.getElementById("date").value;
+      var when = raw;
+      if (raw) {
+        var d = new Date(raw);
+        if (!isNaN(d.getTime())) {
+          when = d.toLocaleString(LOCALE, {
+            weekday: "long", day: "numeric", month: "long",
+            hour: "2-digit", minute: "2-digit"
+          });
+        }
+      }
+      showResult(document.getElementById("reservation-result"), fill(T.resTemplate, {
+        name: document.getElementById("name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        date: when,
+        guests: document.getElementById("guests").value
+      }));
+    });
+  }
+
+  /* --- Formulario de mensaje --- */
+  var msgForm = document.getElementById("contact-message-form");
+  if (msgForm) {
+    msgForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      showResult(document.getElementById("message-result"), fill(T.msgTemplate, {
+        name: document.getElementById("msg-name").value.trim(),
+        message: document.getElementById("msg-body").value.trim()
+      }));
+    });
+  }
+})();
+</script>
+</body>
+</html>
