@@ -50,6 +50,14 @@ un cambio de diseño no pase desapercibido.
 **Los HTML de la raíz y de `en/` son generados: no los edites a mano**, se
 sobrescriben en la siguiente ejecución. Los cambios van en `build.mjs`.
 
+## Publicar
+
+El sitio es HTML estático: no necesita Node ni ningún proceso de compilación en el
+servidor. `serve.mjs` y `build.mjs` son solo herramientas de desarrollo.
+
+Con GitHub Pages basta con activar en **Settings → Pages** la rama `main` y la
+carpeta `/ (root)`. La portada en español queda en la raíz y la inglesa en `/en/`.
+
 ## Formularios
 
 No hay servidor detrás, así que los dos formularios (reserva y mensaje) validan los
